@@ -1,0 +1,8 @@
+1. Common steps for pre-processing a new dataset are:
+Figure out the dimensions and shapes of the problem (m_train, m_test, num_px, ...)
+Reshape the datasets such that each example is now a vector of size (num_px * num_px * 3, 1)
+"Standardize" the data
+
+
+2. A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix X_flatten of shape (b ∗∗ c ∗∗ d, a) is to use:
+X_flatten = X.reshape(X.shape[0], -1).T      # X.T is the transpose of X
